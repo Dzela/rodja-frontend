@@ -27,14 +27,15 @@ class App extends Component {
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
-                        <th>Material</th>
+                        <th>Code For Supplier</th>
                         <th>Height</th>
                         <th>Width</th>
-                        <th>Depth</th>
-                        <th>Code For Supplier</th>
                         <th>Count</th>
-                        <th>Assembly ID</th>
+                        <th>Status</th>
                         <th>Supplier ID</th>
+                        <th>Assembly ID</th>
+                        <th>Machine ID</th>
+                        <th>Material ID</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -42,14 +43,15 @@ class App extends Component {
                         <tr key={part.id}>
                             <td>{part.id}</td>
                             <td>{part.name}</td>
-                            <td>{part.material}</td>
+                            <td>{part.codeForSupplier}</td>
                             <td>{part.height}</td>
                             <td>{part.width}</td>
-                            <td>{part.depth}</td>
-                            <td>{part.codeForSupplier}</td>
                             <td>{part.count}</td>
-                            <td>{part.assembly.id}</td>
+                            <td>{part.status}</td>
                             <td>{part.supplier.id}</td>
+                            <td>{part.assembly ? part.assembly.id : ""}</td>
+                            <td>{part.machine ? part.machine.id : ""}</td>
+                            <td>{part.material.id}</td>
                         </tr>
                     )}
                     </tbody>
